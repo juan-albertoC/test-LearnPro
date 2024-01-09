@@ -1,0 +1,26 @@
+
+comandos basicos ls cd touch
+
+repo local es proyecto guardados en la computadora se crea con git init
+commit es un registro en la linea del tiempo del proyecto
+repositorio virtual se crea en github para colaborar con desarrolladores trabajar en conjunto
+
+he creado un repo-local se muestra main o master color azul para configurar
+git config --global init.defaultBranch master
+
+eliminar repositorio
+.git eliminar
+git bash no esta texto azul de main o master
+
+3 areas o estado de un archivo en git
+directorio-Trabajo  Area_preparacion Repositorio (flujo de trabajo)
+modificada          Preparada        confirmada
+modified            staged           commited
+
+el commit es definito los cambios se encuentra en elrepositorio .git
+
+una vez que se agregado al area de preparacion con el comando git add
+ahora es necesario hacer el commit
+pero se puede revertir la accion con el comando 
+git rm --cached myfile.txt 
+
