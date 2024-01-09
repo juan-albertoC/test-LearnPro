@@ -19,8 +19,31 @@ modified            staged           commited
 
 el commit es definito los cambios se encuentra en elrepositorio .git
 
-una vez que se agregado al area de preparacion con el comando git add
+agregar al area de preparacion con el comando git add y nombre del archivo 
+o tambien con git add . para agregar todos los cambios al area de preparacion 
 ahora es necesario hacer el commit
 pero se puede revertir la accion con el comando 
 git rm --cached myfile.txt 
+
+commits 
+secure hash algorithm (identificador unico para el commit)
+algoritmode hash seguro
+SHA identifica cambios realizados, donde se realizaron y quien hizo cambios
+fecha usuario y correo en el commit para evolucion de un proyecto mensaje odescripcion
+
+crear commits 
+git commit -m "crear un file and learn git"
+
+ver commit secuencia de commits todos los datos y que es parte de la rama main  
+git log  
+
+editar commit con visual studio code 
+al guardar el archivo se observa la letra M de modificated esta en working area
+se han visto varias letras como por ejemplo U no se esta rastreando los cambios esta en working directory 
+en staged area se observa la letra 
+
+en visual studio code un commit 
+git commit
+
+abre visual eleditor cierra el archivo
 
