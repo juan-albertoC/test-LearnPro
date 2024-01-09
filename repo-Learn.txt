@@ -91,6 +91,94 @@ herramineta control de versiones se observa una combinacion de ambas partes
 
 git commit -m "modificar y revertir commits, observar cambios verde y roja"
 
+Ahora si no se requiere tener los cambios de ese commit se hace con hard 
+
+git reset --hard HEAD~1
+
+-------------------------------------------------------------------------------
+Ramas Branch en GIT 
+es una linea independiente de desarrollo en el repositortio 
+una vez se tiene un repositorio tener una copia de ese repositorio que evolucione independiente de otras copias de otras ramas
+version en vivo de un proyecto y tener varias versiones que evoluciona tras la rama main
+
+linea deltiempo de proyecto
+3 commits 
+main o master rama principal
+
+nueva funcionalidad con una rama sin afectar rama main 
+rama evoluciona entonces se combina los cambios esa funcionalidad nueva en el proeycto esta rama para 
+experimentar y hacer pruebas
+
+crear rama en el repositorio
+git branch version-javascript
+
+cambiar de una rama a otra 
+git checkout version-javascript 
+
+tambien combinar comandos branch y checkout 
+volver a rama principal main
+git checkout main
+ahora si rama nueva 
+git checkout -b version-python
+
+cambiar el nombre de una rama
+volver a rama main
+2 maneras
+primer manera ir rama que se quiere cambiar 
+git checkout version-javascript
+git branch -m version-js 
+git branch
+
+segunda manera 
+git checkout main 
+git branch -m version-js version-javascript 
+git branch
+
+eliminar una rama una vez combinada para repositorios locales y estar en rama main 
+git branch -d version-js 
+
+commit en ramas 
+ir a rama version-js 
+abrir file en el editor para modificar
+observar icono control de versiones hasta abajo version-js 
+hacer cambios en en el file 
+guardar cambios 
+git status 
+git add .
+crear commit en rama version-js 
+git commit -m "crear ramas actualizar y modificar "
+git log 
+
+
+abreviar los commits se puedan leer en una sola linea muestra primeros caracteres en codigo sha 
+git log --oneline
+
+git log -p 
+para ver las modificaciones con mas detalle 
+
+fusionar o combinar ramas en git 
+es decir combinar varias lineas  independientes de desarrollo en una sola rama 
+para tener una sola version del proyecto ahora si borrar la rama secundaria 
+estar en la rama main que es quien va recibir la fusion de esos cambios 
+
+ejemplo: 
+git status
+hacer modificaciones en la rama version-js
+git add .
+git commit
+fusionar ramas en git 
+
+git checkout main 
+git log 
+las modificiones que se han hecho no estan en rama main 
+
+Para hacer merge
+git checkout main
+git branch
+git merge version-js 
+---------------------------
+Wooala se han combinado!
+--------------------------
 Hasta aqui se creado una rama aparte que he trabajado para generar nuevas funcionalidades de git en el tema
 de ramas no incluidas, con 92 line ultima hasta el momento rama main, ademas que estas lineas 94 y 95 no se incluyen en la rama version-js 
 
