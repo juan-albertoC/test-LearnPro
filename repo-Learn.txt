@@ -3,7 +3,7 @@ comandos basicos ls cd touch
 
 repo local es proyecto guardados en la computadora se crea con git init
 commit es un registro en la linea del tiempo del proyecto
-repositorio virtual se crea en github para colaborar con desarrolladores trabajar en conjunto
+repositorio remoto se crea en github para colaborar con desarrolladores trabajar en conjunto
 
 he creado un repo-local se muestra main o master color azul para configurar
 git config --global init.defaultBranch master
@@ -46,4 +46,51 @@ en visual studio code un commit
 git commit
 
 abre visual eleditor cierra el archivo
+
+ahora al instalar git se configuro para que visual studio code sea un editor por defecto de git para los commits 
+pero si no es el caso y se requiere otro editor de texto hay que configurarse de la siguiente manera
+git config --global core.editor "code --wait"
+wait permite espera cli mensaje commit y cerrar 
+
+otro editor detexto como sublime text o intellig idea 
+git config --global core.editor "ubicacion file exucutable /asociar edirores de texto con git/"
+git config --global core.editor "subl -n -w"
+
+--------------------------------------
+Modificar un commit en el mensaje descriptivo corto solo en repositorio local
+git log 
+git commit --amend
+editor espera que se cierre elarchivo
+es sencillo para el ultimo commit no para otros commit hacia atras 
+
+Revertir o deshacer el ultimo commit sin afectar los files
+no va a hacer parte del repositorio sirve cuando se creado un commit y falta incluir algo a ese commit 
+git reset --soft HEAD~1
+reiniciar reset historial de commits donde soft como suave no se modifica los files de trabajo
+solo se va a deshacer el registro del commit
+HEAD como el ultimo commit que se ha hecho con el ~1 simboliza retroceder un commit en el historial 
+
+ejemplo se ha creado otro commit 
+git commit -m "modificar y revertir commits"
+se ha ejecutado el comando para revertir
+git reset --soft HEAD~1
+git log
+git status
+se han hecho nuevos cambios con estas lineas de escritura
+guardar y git status
+muestra dos lineas verde y roja
+verde changes to be committed 
+roja  changes not staged for commit 
+
+ir a herramienta control de versiones para ver una roja y verde 
+este mensaje no es parte del area de preparacion para ello git add .
+
+git add . 
+ahora el archivo fue modificado tiene letra M 
+herramineta control de versiones se observa una combinacion de ambas partes 
+
+git commit -m "modificar y revertir commits, observar cambios verde y roja"
+
+
+
 
