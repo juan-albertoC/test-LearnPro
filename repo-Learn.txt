@@ -91,6 +91,8 @@ herramineta control de versiones se observa una combinacion de ambas partes
 
 git commit -m "modificar y revertir commits, observar cambios verde y roja"
 
+Hasta aqui se creado una rama aparte que he trabajado para generar nuevas funcionalidades de git en el tema
+de ramas no incluidas, con 92 line ultima hasta el momento rama main, ademas que estas lineas 94 y 95 no se incluyen en la rama version-js 
 
 
 
