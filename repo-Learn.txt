@@ -150,6 +150,32 @@ git commit -m "crear ramas actualizar y modificar "
 git log 
 
 
+abreviar los commits se puedan leer en una sola linea muestra primeros caracteres en codigo sha 
+git log --oneline
 
+git log -p 
+para ver las modificaciones con mas detalle 
 
+fusionar o combinar ramas en git 
+es decir combinar varias lineas  independientes de desarrollo en una sola rama 
+para tener una sola version del proyecto ahora si borrar la rama secundaria 
+estar en la rama main que es quien va recibir la fusion de esos cambios 
 
+ejemplo: 
+git status
+hacer modificaciones en la rama version-js
+git add .
+git commit
+fusionar ramas en git 
+
+git checkout main 
+git log 
+las modificiones que se han hecho no estan en rama main 
+
+Para hacer merge
+git checkout main
+git branch
+git merge version-js 
+---------------------------
+Wooala se han combinado!
+--------------------------
