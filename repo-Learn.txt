@@ -182,5 +182,329 @@ Wooala se han combinado!
 Hasta aqui se creado una rama aparte que he trabajado para generar nuevas funcionalidades de git en el tema
 de ramas no incluidas, con 92 line ultima hasta el momento rama main, ademas que estas lineas 94 y 95 no se incluyen en la rama version-js 
 
+se ha solucionado un conflicto de auto-merge con editor de texto de visual studio code 
+ya que en diferentes ramas 94 y 95 estaban escritas pero con diferente contenido al fusionar no decide cual dejar por ello 
+se ha decidio que hacer con los archivos fusionados que dejar si incluir remover current del los files de diferentes ramas 
+se verifica que ya no haya conflictos 
+git merge --continue 
+para agregar un nuevo comentario que se ha fix problem de merge 
+
+----------------------------------------
+Github con git desarrollar software
+servicio de hosting alamacenar proyectos en servidor online de desarrolo de software que trabaja con control de versiones  
+
+git copia local en equipo problemas de compatibilidad para una funcionalidad 
+github sincroniza cambios alamcenar repo del proyecto cada quien tener una copia y hacer cambios y mejorar cambios para devolver a la copia principal 
+crear cuenta y perfil de github 
+
+interaccion con plataforma de github
+notificaciones, filtros para tareas, administrar filtros 
+filtrar en barra de busqueda
+
+opciones icono de mas y flecha
+new gist pequeñocodigo
+
+sponsors donaciones 
+
+personalizar editar perfil de github 
+your profile public 
+imagen photo 
+overview secuencia de repos 
+contribuciones del dia cuadrados se reflejan 
+repositorios
+projects
+packages 
+stars
+
+new repository 
+owner o organization   repository name
+add a readme.md file markdown  
+file .gitignore file oculto que permite escojer que files no van a hacer rastreados
+no van a ser parte del repositorio van a ser ignorados 
+licencies que puede y no puedes hacer con el codigo legalmente depende la plantilla investigar terminos
+apache, creative commons. GNU general public license v3.0
+github configura la rama principal con el nombre main 
+
+cofigurar repositorio en about descripcion del repositorio 
+edit details as description
+website 
+topics lenguajes programacion etiquetas
+include in the home page: Releases, Packages, Environments 
+
+CODE  
+al crear un repositorio en github hay pordefecto un initial commit con codigo sha 
+en la rama main y sin etiquetas asignadas 
+
+file readme.md tiene raw que permite verel file como un archivo de texto 
+edit file readme.md, abrir en github.dev que es tool online como visual studio code 
+open github desktop tool de manera grafica
+copiar y eliminar readme.md  crean otro commit registrar cada cambio 
+se puede ir a una linea, copiar una ruta o link permanente 
+archivos tiene tiempo y fecha de modificacion 
+asi como el ultimo archivo modificado cuantos commits en dicha rama 
+
+configurar tambien el sponsor o patrocionadores de un proyecto con links websites, etc 
+cuantos contribuidores o personas existen en el project 
+cuantos ambientes o entornos se usan (enviromennts) ejemplo github-pages project en vivo 
+cuantas distriuiciones existen en el project de un porcentaje de lenguajes de programacion 
+
+go to file ir a file especifico y filtrar en barra para busquedas rapidas 
+add file para crear new file o subir upload file existentes 
+code copia local del repositorio 
+que se puede clonar con https ssh githubcli 
+se puede abrir con github desktop  y sepuede descargar code como zip 
+tambien hacer codespaces 
+
+ajustes del repositorio para clonar 
+SETTINGS
+name de repositorio  boton rename 
+subir una imagen vista previa en redes sociales 
+features: activar o desactivar depende deltipo de cuenta free o pro 
+como wikis: sirven para tener documentacion para nuestro repositorio, se puede restringir acceso para editar colaboradores
+como issues: son notas digitales sobre asuntos a tratar en repositorio como errores, implementaciones news, 
+como sponsorships: patrocinadores o donaciones del project 
+como preservar este repositorio: para incluir en github archive programa para permaner a lo largo del tiempo
+como discusiones: comunidad tenga comunicacion conversaciones preguntas y respuestas sin abrir nuevos issues 
+como pull request: personalizar las operaciones en el repositorio 
+como danger zone: cambios permanentes visibilidad del repositorio a privado
+tranferir propiedad a otro user 
+archivar repositorio 
+delete repositorio 
+
+existen mas settings como para colaboradores, branches, tags, actions, webhoocks, enviroments,codespaces,pages
+en seguridad deploy keys, secrets and variables, code security and analisis 
+
+eliminar repositorio github 
+
+add file al repositorio and clone a computadora 
+add file created file new hola-mundo.txt configurar spaces tabs 
+se tiene un preview importante para markdown 
+crear un commit  create hola-mundo.txt 
+add extend description para proejects complejos 
+direct rama main o otra
+crear iniciar un pull request 
+boton commit new 
+
+ahora clonar repositorio remoto es una copia del repositorio para trabajar localmente 
+crear una copia local de un repositorio remoto, incluye sus versiones e historial de commits 
+git clone 
+origin es el nombre que se le va asignar a ese repositorio remoto que se clona para enviar y recibir info e interactuar con la informacion
+en nuestra copia local de git es importante
+
+CLONAR DE GITHUB HACIA PC LOCAL  
+git clone https://github.com/user/namerepo.git 
+acceder al repositorio clonado en editor de texto 
+en git bash git log --omeline
+
+crear commit en repositorio clonado y enviarlo a github 
+cambio en file  M 
+git status 
+branch main is up to date with 'origin/main'
+pero hay cambios locales que no sehan incluido en el area de preparacion 
+git add .
+git commit 
+(actulizar correo y usuario en git corresponda misma en github )
+mensaje infinitivo
+guardar
+salir
+git status 
+your branch is ahead of origin/main by 1 commit 
+
+git remote
+origin 
+
+git remote -v 
+fetch para buscar obtner cambios del repo remoto 
+push enviar al repo remoto los cambios 
+
+enviar cambios a github (push)
+con git push envia cambios realizados en un repositorio local aun repositorio remoto 
+para que ambos tengan la misma info 
+
+pero es importante ocultar tu correo en github 
+profile settings emails, primary email address 
+@users.noreply.github.com
+git config --global user.email
+
+marcar la opcion de keep my email address private 
+tambien la otra opcion de block
+
+git push 
+git push origin main
+
+permision denegaded 
+configurar crednciales en github 
+https o ssh
+
+----------------------------------------------
+configurar https con un token para enviar push info con https 
+en un repositorio Remoto clonar para https con git clone 
+llegar a directorio pc para clonar repositorio remoto 
+hacer cambios crear docs 
+git add.
+git commit 
+git status
+que pasa si ?
+git remote -v 
+git push origin main  (repo remoto en github)
+autenticacion token 
+settings->developer settings 
+generar tokens classic
+nota para que es 
+expira
+scope o permisos sobre la cuenta: repo, ssh 
+guardar el token en un arhivo 
+ahora si
+git push origin main
 
 
+---
+Incorporar cambios con pull (inverso de push)
+git pull  
+repo nuevo en github 
+clonar git clone https 
+hacer cambio en repositorio remoto y asi actualizar repo local  ambos tengan misma info  
+pull = jalar, descarga contenido 
+entonces 
+tras hacer el cambio de un archivo por remoto 
+en git bash local 
+git status 
+git pull origin main 
+-------
+git pull vs git fetch 
+
+git fetch verifica  cambios que se han realizado en repo remoto sin combinar con repo local 
+git fetch origin 
+vsualizar cambios con 
+git checkout origin/main 
+regresar con git checkout main 
+ahora si git pull origin main 
+
+--------------------------------------------------------------------
+REPO LOCAL ENVIAR A GITHUB
+crea carpeta en direccion local 
+git init 
+git add .
+git commit crea file.js 
+git log 
+crear un repositorio remoto para el repo local 
+no add un readme
+git remote -v  (no hay ninguno)
+git remote add origin ubicacion-Github-repo 
+git remote -v 
+enviar cambios de repo local a repo remoto 
+git status 
+git fetch nada
+git push origin main 
+
+----------------------------------------------------------------------------------------
+
+Bifurcar (fork) un repo 
+Es crear una copia del repo remoto en tu cuenta de github 
+freeecocamp fork para tener una copia en nuestra cuenta e github 
+para luego clonar y hacer copia repo local hacer commits  
+
+github freecocamp boton fork 
+github simbolo de bifurvar 
+si el repositorio de freecodecamp realiza cambios  nuestra fork se desactualiza  
+-----
+clonar repo bifurcado de github 
+mismo proceso anterior git clone https..
+
+-----
+contribuir al repo original tras haber clonado repo bifurcado
+pull request 
+Es una solicitud de combinar tus cambios con el repo original del proyecto 
+git status 
+git add .
+git commit
+normas de formato depende empresas para hacer ccontribucuiiones 
+ejemplo: add text in this file 
+git push origin main 
+
+open pull request
+comparing changes 
+texto y comentario del porque se hace el pull readmeuest 
+crear pull request que sera revisado o tambien crear draft pull request que es como una vista previa o borrador
+
+----
+a partir de contribuir al repo original tras haber clonado repo bifurcado hacer un pull request pero en otra rama
+anterior se hizo de main a main por ello hacer: 
+1 cerrar pull request en el boton 
+2 ir a la bifurcacion
+3 settings 
+4 delete repo 
+5 crear de nuevo otra bifurcacion 
+6 clonar repo bifurcado a maquina local git clone https...
+7 entrar ubicacion de carpetas 
+No modificar la rama main, si no crear otra rama y trabajar a partir de ahi 
+8 git checkout -b parrafo-nuevo 
+9 modificar un archivo
+10 git status
+11 git add 
+12 git commit 
+13 agregar parrafo mensaje 
+(mandar una rama local a github)
+14 git push origin parrafo-nuevo  (name de rama)
+15 ir a copia bifurcada y cargar github 
+16 ir a rama correspondiente 
+17 ir a boton compare y pull request o tambien en contribute boton open pull request 
+18 mismo proceso para crear un pull request comparng changes 
+19 titulo, descripcion para personas que mantiene  el repo,  create 
+
+------------------
+Actualizar repo bifurcado 
+copia bifurcada se retrasa con respecto al proyecto original 
+con la opcion de github sync fork 
+se puede comparar o update branch 
+
+en la copia local 
+git pull origin main 
+
+no hay conflictos ya que la rama main  se deja intacta y trabajar con otras ramas 
+
+-------
+Issues 
+registra tareas asuntos del repo que se requiere aboradar en el futuro
+porqu antes de crear un pull request se crea primero un issue para informar al dueño del repo la contribucion que queremos hacer al repo si es que se valida o no 
+issues tienen identificador unico, quien lo creo,fecha, titulos, etiquetas como scope status type
+abrir issue tiene una descripcion 
+
+create new issue 
+titulo 
+comentario con plantilla o sin plantilla hay herramientads de escritura 
+por ejmplo una plantilla de issue para freecodecamp es:
+1 describe the issue
+2 affected page 
+3 Expected Behavior  resultado esperado
+4 Screenshots
+5 System
+6 Additional context 
+
+issues se pueden cerrar como completed o not planned 
+asiganar a personas 
+etiquetas se pueden filtrar  por author, projects, ordenar por criterios 
+
+-------
+crear ramas remotas desde github 
+boton main de rama principal en el dialogo de busqueda find or crete a branch 
+ahora:
+tener una copia de rama remota en la pc local 
+git clone https....
+git branch 
+git pull origin name_rama_remota  (no ocurre nada)
+entonces se puede hacer
+git fetch origin 
+git checkout name_rama_remota 
+git branch 
+
+--
+eliminar ramas remota y local 
+git checkout main 
+git branch 
+git branch -d name_rama (local)
+git branch -a (ver ramas remotas)
+desde github view all branches and delete (remota)
+desde linea comandos 
+git push origin-d name_rama 
+juan alberto cuevas
