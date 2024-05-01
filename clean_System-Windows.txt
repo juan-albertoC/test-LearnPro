@@ -1,0 +1,78 @@
+# Juan Alberto Cuevas
+
+# 1 Mayo 2024
+
+# Limpiar, acelerar y optimizar con sistema operativo Windows 10
+
+1) Windows + R:  %temp%, Temp
+
+2) Windows + R:  prefetch
+
+3) Disco C -> Propiedades -> General -> Liberar espacio   (tambien archivos del sistema)
+
+4) Configuracion del sistema
+
+   Windows + R:  msconfig
+
+   arranque: 15s 
+  
+   opciones avanzadas:numero de procesadores: num alto
+
+   Servicios del sistemasegun la prioridad de estado se requiera habilitar o deshabilitar (no cambia)
+
+   Inicio de windows: Administrador de tareas para verificar cuales son las apps que inician en el arranque 
+                      se observa proecesos,rendimiento,un disgnostico de la actividad de usuario en cpu,memoria y servicios en ejecucion
+
+   Reiniciar sistema
+
+5) Configuracion en rendimiento de efectos visuales 
+ 
+   Este equipo -> Propiedades -> configuracion avanzada del sistema -> opciones avanzadas -> rendimiento -> configuracion
+
+   -> efectos visuales -> ajuste para tener un mejor rendimiento
+
+6) Visor de eventos (Registros de Windows)
+
+   Aplicacion (Vaciar)
+   Seguridad  (Vaciar)
+   Intalacion (Vaciar)
+   Sistema (Vaciar)
+
+7) Desfragmentar Optimizar Disco C
+
+
+8) Ajuste de puntero de mouse para acelerar   (editar registros permisos de usuario para esta accion)
+
+   Windows + R: regedit -> Key_Current_user -> control-panel -> mouse -> mouseHaverTime -> modificar de 400 a 10
+                                               control-panel -> desktop -> menuShowDelay -> modificar de 400 a 10
+
+9) Restaurar sistema
+
+
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+Desinstalar programas
+
+1) panel de control
+
+2) Program files (64 bits) o Program files(32 bits)
+
+3) usuarios/userName/AppData -> local,local low, running
+
+4) Windows + R: regedit
+   
+   Hkey_users -> software -> programaEliminar
+   Hkey_current_user -> software -> programaEliminar
+   Hkey_local_Machine -> software -> programaEliminar
+ 
+ 
+------------------------------------------------
+------------------------------------------------
+
+cerrar proceso si esta oculto
+
+RMDIR /Q/S    (carpetas)
+DEL /F/Q/S *.*>NUL  (files)
+
