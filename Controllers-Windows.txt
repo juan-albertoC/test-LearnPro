@@ -1,0 +1,79 @@
+
+# Juan Alberto Cuevas
+
+# 1 Mayo 2024
+
+integridad de la memoria es un elemento de la seguridad basado en la virtualizacion, protege contra malware
+que intenta  explotar vulnerabilidades en las capas mas profundas de windows.
+La funcion de integridad de la memoria se activa o desactiva en el apartado de aislamiento del nucleo
+es comun un mensaje "La integridad de la memoria esta desactivada, su dispositivo puede ser vulnerable"
+
+Problema: Drivers tras apagar el sistema incorrecto o pantalla azul, actualizaciones que no han 
+funcionado correctamente o virus
+
+Mejor Caso: activar y virtualizar todo el contenido de la memoria
+Contras del mejor caso: problemas de rendimiento en juegos, programas que dependen de la aceleracion por hardware, problemas con maquinas virtuales
+
+Soluciones:
+
+1) Descargar actualizaciones disponibles (Windows Update)
+
+   buscar, descargar e instalar 
+
+   configuacion -> windows Update -> buscar actualizacion, -> deascargar e instalar actualizacion
+ 
+   si no existe tal actualizacion entonces acceder al aislamiento del nucleo
+
+2) Acceder al aislamiento del nucleo y la integridad de memoria
+
+   configuracion -> privacidad y seguridad -> Areas de proteccion -> seguridad del dispositivo -> aislamiento del nucleo -> detalles
+
+   se informa del error: mensaje actualizar algun driver desde apartado de integridad de memoria
+
+3) Buscar el driver problema manual
+
+   En mismo apartados del paso anterior en integridad de memoria un indicador "Revisar controladores incompatibles" 
+
+   se describe cual es el driver problema, nombre del producto, version del controlador, nombre del archivo
+
+   no aparece nombre del archivo: Comando de recuperacion
+
+   3.1  cmd como administrador o terminal con permisos de usuario o simbolo del sistema
+   3.2  dism/online/get-drivers/format:table
+   3.3  buscar manera manual el driver problema de compatibilidad, en la columna de "Nombre publicado" guardar este nombre publicado(se utiliza en paso 5.3)
+   3.4  una vez localizado y tambien nombre del proveedor
+
+4) Actualizar el driver (controlador) problema
+
+   4.1 administrador de dispositivos
+   4.2 en nueva ventana -> opcion ver -> opcion de dispositivos por controlador
+   4.3 buscar el nombre de driver problema -> pulsar y expandir sobre el
+   4.4 clic derecho sobre este y del menu elegir la opcion de -> actualizar driver
+   4.5 seleccionar opcion -> buscar controladores automaticamente
+ 
+   windows realiza proceso de buscar y descargar el driver mas reciente, si no ir a la web del fabricante para buscar el ultimo driver disponible
+
+5) Desinstalacion forzosa del controlador
+
+   No se actualizo el driver entonces desinstalacion forzada del driver -> instalacion desde cero
+
+   5.1  cmd como administrador o terminal con permisos de usuario o simbolo del sistema
+   5.2  dism/online/get-drivers/format:table
+   5.3  pnputil/delete-driver<Publisher Name>/uninstall/force (cambiar el Publisher Name por correspondiente que se guardo)
+   
+   windows realiza proceso y al terminar sale mensaje "Paquete de controladores desinstalado"
+   Reiniciar el sistema operativo
+   verificar si problema desaparecio, si es asi entonces instalar de nuevo el controlador que se ha eliminado
+
+6) Virus
+   error habitual cuando el pc tiene un virus que intenta tomar el control de algun proceso o servicio cargado en la memoria RAM
+   una forma es asegurarse con permisos SYSTEM dentro de windows y garantizar su persistencia
+
+   analizar el pc con antivirus y no este infectado de malware
+
+  
+   
+   
+  
+   
+  
